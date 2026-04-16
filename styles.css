@@ -40,7 +40,7 @@
             font-size: 1.2rem;
             font-weight: bold;
             letter-spacing: 1px;
-            left-margin: 3px;
+            margin-left: 3px;
             gap: 8px;
         }
         /* Hide the checkbox */
@@ -202,6 +202,28 @@
         #img-4:checked ~ .slides{
             transform: translateX(-300%);
         }
+        /* Hide all control groups by default */
+        .control-group {
+            display: none;
+        }
+
+/* Show the specific group based on which radio is checked */
+        #img-1:checked ~ .controls .s1,
+        #img-2:checked ~ .controls .s2,
+        #img-3:checked ~ .controls .s3,
+        #img-4:checked ~ .controls .s4 {
+            display: block;
+        }
+
+/* Ensure arrows are positioned correctly within the slider */
+        .controls label {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+    /* ... your other arrow styles (padding, background, etc) ... */
+        }
+
 
 /* Styling the clickable arrows */
        .controls label {
